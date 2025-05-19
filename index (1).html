@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .key-instruction {
+        position: fixed;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1.2em;
+        color: #666;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="home">
+      <div class="intro">
+        <h1>Hello, I am <br />Kaan Toktaş</h1>
+        <p>
+          I am a computer engineering student and I work in the fields of mobile
+          applications and game production.
+        </p>
+        <a href="resume.html" class="resume-link">View My Resume</a>
+      </div>
+      <div class="intro-img">
+        <img src="img/image2.JPG" alt="Kaan Toktaş at computer" />
+      </div>
+
+      <div class="key-instruction">Press any key to view resume</div>
+    </section>
+
+    <script>
+      document.addEventListener("keydown", function () {
+        window.location.href = "resume.html";
+      });
+
+      // Mobile kullanıcılar için dokunmatik destek
+      document.addEventListener("click", function () {
+        window.location.href = "resume.html";
+      });
+    </script>
+  </body>
+</html>
